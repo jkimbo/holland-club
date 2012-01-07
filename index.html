@@ -33,6 +33,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 </head>
 <body>
+
 	<!-- Primary Page Layout
 	================================================== -->
 
@@ -57,32 +58,38 @@
 		</div>
         <div class="sixteen columns" id="email">
             <hr />
-            <div class="row">
-                <div class="six columns offset-by-five cont">
-                    <a href="mailto:" class="btn large primary" id="mailLink">Send Email</a> 
+            <div class="row" id="setName">
+                <div class="six columns offset-by-three">
+                    <input type="text" id="name" class="five columns" placeholder="Your name"/>
                 </div>
+                <div class="five columns cont">
+                    <a href="#" class="btn large primary" id="mailLink">Create Email</a> 
+                </div>
+                <a href="#" class="five columns offset-by-three" id="showTemplate">Just show me the email already</a>
             </div>
-            <div id="template">
-                <h3>Create your own</h3>
-                <div id="sendto">
-                    <span>To:</span>
-                    <input type="text" value="example@imperial.ac.uk"/>
-                </div>
-                <div id="text">
-                    <textarea>Dear ...,
-
-I find the proposal to change the Holland club into a cantine. 
-
-Yours faithfully, 
-
-YOURNAME
-                    </textarea>
+            <div class="row">
+                <div class="twelve columns offset-by-two" id="template">
+                    <div id="sendto">
+                        <span>To:</span>
+                        <input type="text" value="example@imperial.ac.uk"/>
+                    </div>
+                    <div id="text">
+                    <textarea><?php echo $email; ?></textarea>
+                    </div>
                 </div>
             </div>
         </div>
         <footer class="sixteen columns">
         </footer>
 	</div><!-- container -->
+
+    <script type="text" id="emailcontent">Dear ...,
+
+I find the proposal to change the Holland club into a cantine abhorent.
+
+Yours faithfully,
+
+</script>
 
 	<!-- JS
 	================================================== -->
@@ -96,10 +103,10 @@ YOURNAME
     <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
     <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
 
 <!-- End Document
