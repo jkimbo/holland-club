@@ -29,21 +29,20 @@ header {
     .cont {
         margin-left: 5px;
     }
-    .row {
-        margin-top: 35px;
-    }
     #name {
         padding: 10px 20px;
         font-size: 2em;
         height: 100%;
         line-height: 100%;
         margin-bottom: 20px;
+        margin-top: 10px;
     }
     #mailLink {
         width: 80%;
         height: 1.17em;
         text-align: center;
         font-size: 35px;
+        margin-top: 10px;
     }
     #showTemplate {
         margin-left: 20px;
@@ -55,10 +54,14 @@ header {
 #template {
     display: none;
     margin-left: 20px;
-    #sendto {
+    #sendto, #subjectcont {
         margin-top: 10px;
         margin-bottom: 20px;
         font-size: 1.3em;
+        #mailtocont {
+            float: right;
+            width: 100px;
+        }
     }
     #text {
         textarea {

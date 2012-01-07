@@ -71,10 +71,17 @@
                 <div class="twelve columns offset-by-two" id="template">
                     <div id="sendto">
                         <span>To:</span>
-                        <input type="text" value="example@imperial.ac.uk"/>
+                        <input type="text" id="emailto"/>
+                        <div id="mailtocont">
+                            <a href="#" id="mailto">Send email</a>
+                        </div>
+                    </div>
+                    <div id="subjectcont">
+                        <span>Subject:</span>
+                        <input type="text" id="subject" />
                     </div>
                     <div id="text">
-                    <textarea><?php echo $email; ?></textarea>
+                        <textarea><?php echo $email; ?></textarea>
                     </div>
                 </div>
             </div>
