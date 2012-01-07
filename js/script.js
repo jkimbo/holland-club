@@ -26,9 +26,19 @@ $(document).ready(function() {
         return false;
     });
 
-    $('#text textarea').keyup(function() {
-        email.body = $('#text textarea').val();
-        setMailTo();
+    var textarea = $('#text #body');
+    var subjectfield = $('#subjectcont #subject');
+    var emailfield = $('#sendtocont #to');
+
+    $.each([textarea, subjectfield, emailfield], function(index, value) {
+        value.click(function() {
+            this.select();
+        });
+
+        value.keyup(function() {
+            email[$(this).attr('id')] = $(this).val();
+            setMailTo();
+        });
     });
 
     function showTemplate(name) {
@@ -45,9 +55,9 @@ $(document).ready(function() {
     }
 
     function setTemplate() {
-        $('#template textarea').val(email.body);
-        $('#subjectcont #subject').val(email.subject);
-        $('#sendto #emailto').val(email.to);
+        textarea.val(email.body);
+        subjectfield.val(email.subject);
+        emailfield.val(email.to);
     }
 
     function setMailTo() {

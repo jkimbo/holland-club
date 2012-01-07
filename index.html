@@ -69,24 +69,25 @@
             </div>
             <div class="row">
                 <div class="twelve columns offset-by-two" id="template">
-                    <div id="sendto">
+                    <div id="sendtocont">
                         <span>To:</span>
-                        <input type="text" id="emailto"/>
-                        <div id="mailtocont">
-                            <a href="#" id="mailto">Send email</a>
-                        </div>
+                        <input type="text" id="to"/>
                     </div>
                     <div id="subjectcont">
                         <span>Subject:</span>
                         <input type="text" id="subject" />
                     </div>
                     <div id="text">
-                        <textarea><?php echo $email; ?></textarea>
+                        <textarea id="body"></textarea>
+                    </div>
+                    <div id="mailtocont">
+                        <a href="#" class="btn large primary" id="mailto">Open email</a>
                     </div>
                 </div>
             </div>
         </div>
         <footer class="sixteen columns">
+            <a href="http://jkimbo.co.uk">jkimbo</a>
         </footer>
 	</div><!-- container -->
 

@@ -36,6 +36,7 @@ header {
         line-height: 100%;
         margin-bottom: 20px;
         margin-top: 10px;
+        border-radius: 6px;
     }
     #mailLink {
         width: 80%;
@@ -46,7 +47,7 @@ header {
     }
     #showTemplate {
         margin-left: 20px;
-        font-size: 1.1em;
+        font-size: 1em;
         color: #666;
     }
 }
@@ -54,14 +55,10 @@ header {
 #template {
     display: none;
     margin-left: 20px;
-    #sendto, #subjectcont {
+    #sendtocont, #subjectcont {
         margin-top: 10px;
         margin-bottom: 20px;
         font-size: 1.3em;
-        #mailtocont {
-            float: right;
-            width: 100px;
-        }
     }
     #text {
         textarea {
@@ -69,6 +66,18 @@ header {
             height: 200px;
             font-size: 1.3em;
         }
+    }
+    #mailtocont {
+        margin-top: 20px;
+    }
+}
+
+footer {
+    margin-bottom: 20px;
+    a {
+        float: right;
+        color: #3669A1;
+        font-size: 1.1em;
     }
 }
 
