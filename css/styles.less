@@ -73,11 +73,11 @@ header {
 }
 
 footer {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     a {
         float: right;
         color: #3669A1;
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
 
@@ -94,15 +94,50 @@ footer {
 	@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+    }
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+        #name {
+            margin-bottom: 0px !important;
+        }
+        #showTemplate {
+            margin-top: 10px;
+        }
+        #name {
+            width: 380px !important;
+            margin-left: 20px !important;
+            margin-bottom: 0px !important;
+        }
+        #mailLink {
+            width: 270px !important;
+            margin-left: 15px !important;
+        }
+        #text #body {
+            width: 400px !important;
+        }
+    }
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
         header h1 {
             font-size: 45px !important;
+        }
+        #showTemplate {
+            margin-top: 10px;
+        }
+        #name {
+            width: 260px !important;
+            margin-left: 20px !important;
+            margin-bottom: 0px !important;
+        }
+        #mailLink {
+            width: 270px !important;
+            margin-left: 15px !important;
+        }
+        #text #body {
+            width: 280px !important;
         }
     }
 
